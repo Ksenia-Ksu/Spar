@@ -45,8 +45,6 @@ struct FeedbacksView: View {
             .cornerRadius(10)
             .clipped()
             .shadow(color: Color.secondary, radius: 10, x: 0, y: 0)
-            
-
         }
         
         private func imageName(for starIndex: Int, value: Double) -> String {

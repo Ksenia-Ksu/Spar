@@ -36,7 +36,7 @@ struct Product: Hashable {
 
 let products = [
     Product(name: "Производство", title: "Россия, Москва"),
-    Product(name: "Энергетическая ценность, ккал/100гр", title: "250 ккал, 105 кДж"),
+    Product(name: "Энергетическая \nценность, \nккал/100гр", title: "250 ккал, 105 кДж"),
     Product(name: "Вес нетто", title: "1.6 кг"),
     Product(name: "Вес продукта", title: "1.6 кг"),
     Product(name: "Углеводы/100 г", title: "1,3 г")

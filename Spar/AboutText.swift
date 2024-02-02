@@ -14,18 +14,21 @@ struct AboutText: View {
             ForEach(products ,id: \.self) { id in
                 HStack {
                     Text(id.name)
-                        .frame(maxWidth: 150, alignment: .leading)
+                        .frame(alignment: .leading)
                         .lineLimit(4)
                     Text(id.dottedLine)
                         .layoutPriority(-1)
                         .foregroundColor(.gray)
                     Text(id.title)
                         .lineLimit(3)
-                        .frame(maxWidth: 100)
+                        .frame( alignment: .trailing)
+                        
                 }
                 .lineLimit(1)
             }
         }
+        .padding(.leading, 10)
+        .padding(.trailing, 10)
     }
 }
 

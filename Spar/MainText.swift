@@ -16,6 +16,7 @@ struct MainText: View {
                 .frame(alignment: .leading)
             Spacer()
         }
+        .padding(.leading, 10)
     }
 }
 

@@ -21,6 +21,7 @@ struct FeedbackTitle: View {
                     .foregroundColor(.green)
             }
         }
+        .padding(.all, 10)
     }
 }
 

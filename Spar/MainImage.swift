@@ -12,7 +12,6 @@ struct MainImage: View {
         Image("bake")
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .padding()
     }
 }
 

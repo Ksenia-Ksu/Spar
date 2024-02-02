@@ -18,6 +18,7 @@ struct CountryView: View {
                 .padding(.top, 5)
             Spacer()
         }
+        .padding()
     }
 }
 

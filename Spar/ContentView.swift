@@ -8,22 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selectedItem: Int
     var body: some View {
         TabView {
-            NavigationStack {
+            NavigationView {
                 ScrollView {
-                    VStack {
-                        PriceCard()
-                        MainImage()
-                        RaitingView()
-                        MainText()
-                        CountryView()
-                        AboutText()
-                        ButtonView()
-                        FeedbackTitle()
-                        FeedbacksView()
+                    VStack(spacing: 10) {
+                        Group {
+                            PriceCard()
+                            MainImage()
+                            RaitingView()
+                            MainText()
+                            CountryView()
+                            AboutText()
+                            ButtonView()
+                            FeedbackTitle()
+                            FeedbacksView()
+                            BorderButtonView()
+                        }
                     }
-                    .padding()
+                    VStack(spacing: 10) {
+                        PickerViewNew(section: $selectedItem)
+                    }
                     .toolbar {
                         ToolbarItemGroup(placement: .navigationBarTrailing) {
                             
@@ -76,6 +82,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(selectedItem: 0)
     }
 }

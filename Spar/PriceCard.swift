@@ -19,6 +19,7 @@ struct PriceCard: View {
             }
             Spacer()
         }
+        .padding()
     }
 }
 

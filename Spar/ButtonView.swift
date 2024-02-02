@@ -18,8 +18,7 @@ struct ButtonView: View {
             }
             Spacer()
         }
-        .padding(.top)
-        .padding(.bottom)
+        .padding(.all, 10)
     }
 }
 
