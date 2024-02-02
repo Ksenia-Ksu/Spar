@@ -9,13 +9,68 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
+        TabView {
+            NavigationStack {
+                ScrollView {
+                    VStack {
+                        PriceCard()
+                        MainImage()
+                        RaitingView()
+                        MainText()
+                        CountryView()
+                        AboutText()
+                        ButtonView()
+                        FeedbackTitle()
+                        FeedbacksView()
+                    }
+                    .padding()
+                    .toolbar {
+                        ToolbarItemGroup(placement: .navigationBarTrailing) {
+                            
+                            Button { } label: {
+                                Image(systemName: "doc.plaintext")
+                            }
+                            Button { } label: {
+                                Image(systemName: "arrow.up.doc")
+                            }
+                            Button { } label: {
+                                Image(systemName: "heart")
+                            }
+                        }
+                        ToolbarItem(placement: .navigationBarLeading)  {
+                            Button { } label: {
+                                Image(systemName: "arrow.left")
+                            }
+                        }
+                    }
+                }
+            }
+            .tabItem {
+                Label("Главная", systemImage: "tree.circle")
+                    .accentColor(.green)
+            }
+            
+            
+            
+            
+            
+            ///////////////
             Text("Hello, world!")
+                .tabItem {
+                    Label("Каталог", systemImage: "rectangle.grid.2x2")
+                }
+            
+            Text("Hello, world!")
+                .tabItem {
+                    Label("Корзина", systemImage: "cart")
+                }
+            
+            Text("Hello, world!")
+                .tabItem {
+                    Label("Профиль", systemImage: "person")
+                }
         }
-        .padding()
+        .accentColor(.green)
     }
 }
 
