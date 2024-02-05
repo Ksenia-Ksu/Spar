@@ -8,27 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var selectedItem: Int
+    @ObservedObject var viewModel: ViewModel
     var body: some View {
         TabView {
             NavigationView {
                 ScrollView {
                     VStack(spacing: 10) {
                         Group {
-                            PriceCard()
                             MainImage()
-                            RaitingView()
-                            MainText()
-                            CountryView()
-                            AboutText()
-                            ButtonView()
-                            FeedbackTitle()
+                            ProductView()
+                            AboutProduct()
                             FeedbacksView()
-                            BorderButtonView()
+                            PickerView(viewModel: viewModel)
+                                .onChange(of: viewModel.selectedItem) { _ in
+                                    viewModel.setIsThing()
+                                }
+                            PriceCountView(viewModel: viewModel)
                         }
-                    }
-                    VStack(spacing: 10) {
-                        PickerViewNew(section: $selectedItem)
                     }
                     .toolbar {
                         ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -57,15 +53,10 @@ struct ContentView: View {
             }
             
             
-            
-            
-            
-            ///////////////
             Text("Hello, world!")
                 .tabItem {
                     Label("Каталог", systemImage: "rectangle.grid.2x2")
                 }
-            
             Text("Hello, world!")
                 .tabItem {
                     Label("Корзина", systemImage: "cart")
@@ -81,7 +72,8 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    static let viewModel = ViewModel()
     static var previews: some View {
-        ContentView(selectedItem: 0)
+        ContentView(viewModel: viewModel)
     }
 }

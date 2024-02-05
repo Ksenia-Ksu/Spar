@@ -10,14 +10,18 @@ import SwiftUI
 struct FeedbacksView: View {
     
     var body: some View {
-        ScrollView(.horizontal) {
-            LazyHStack {
-                ForEach(feedbacks, id: \.self) { feedback in Cell(feedback: feedback)
+        VStack {
+            FeedbackTitle()
+            ScrollView(.horizontal) {
+                LazyHStack {
+                    ForEach(feedbacks, id: \.self) { feedback in Cell(feedback: feedback)
+                    }
                 }
+                .padding(.top)
+                .padding(.bottom)
+                .padding(.leading, 3)
             }
-            .padding(.top)
-            .padding(.bottom)
-            .padding(.leading, 3)
+            BorderButtonView()
         }
     }
     
@@ -58,6 +62,43 @@ struct FeedbacksView: View {
             else {
                 return "star"
             }
+        }
+    }
+    private struct BorderButtonView: View {
+        var body: some View {
+            Button { } label:  {
+                Text("Оставить отзыв")
+                    .bold()
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .font(.system(size: 18))
+                    .padding()
+                    .foregroundColor(.green)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 25)
+                            .stroke(Color.green, lineWidth: 5)
+                    )
+            }
+            .cornerRadius(25)
+            .padding(.leading, 10)
+            .padding(.trailing, 10)
+        }
+    }
+    
+    private struct FeedbackTitle: View {
+        var body: some View {
+            HStack {
+                Text("Отзывы")
+                    .bold()
+                    .font(.system(size: 20))
+                Spacer()
+                Button { } label: {
+                    Text("Все отзывы")
+                        .bold()
+                        .font(.system(size: 20))
+                        .foregroundColor(.green)
+                }
+            }
+            .padding(.all, 10)
         }
     }
 }

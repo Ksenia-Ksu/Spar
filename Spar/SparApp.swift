@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct SparApp: App {
+    let viewModel = ViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView(selectedItem: 0)
+            ContentView(viewModel: viewModel)
         }
     }
 }

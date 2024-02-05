@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct PickerViewNew: View {
-    @Binding var section: Int
+struct PickerView: View {
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
-        Picker("", selection: $section) {
+        Picker("", selection: $viewModel.selectedItem) {
             Text("Шт").tag(0)
             Text("Кг").tag(1)
         }

@@ -41,3 +41,21 @@ let products = [
     Product(name: "Вес продукта", title: "1.6 кг"),
     Product(name: "Углеводы/100 г", title: "1,3 г")
 ]
+
+class ViewModel: ObservableObject {
+    @Published var selectedItem: Int = 0
+    @Published var isThing = true
+    @Published var amount = 1
+    
+    func setIsThing() {
+        isThing = !isThing
+    }
+    
+    func checkAmount() {
+        if amount < 1 {
+            amount = 1
+        }
+    }
+}
+
+

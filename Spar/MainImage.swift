@@ -9,9 +9,28 @@ import SwiftUI
 
 struct MainImage: View {
     var body: some View {
-        Image("bake")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
+        VStack {
+            PriceCard()
+            Image("bake")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+        }
+    }
+    
+    private struct PriceCard: View {
+        var body: some View {
+            HStack {
+                Button { } label: {
+                   Text("Цена по карте")
+                        .foregroundColor(.white)
+                        .padding(7)
+                        .background(Color.green)
+                        .cornerRadius(10)
+                }
+                Spacer()
+            }
+            .padding()
+        }
     }
 }
 
