@@ -79,6 +79,15 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		85152BDE2B73B1800062FA75 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				852B16812B6D437800AC4787 /* Preview Content */,
+				852B167F2B6D437800AC4787 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		852B166F2B6D437700AC4787 = {
 			isa = PBXGroup;
 			children = (
@@ -101,8 +110,7 @@
 				85152BDD2B73AFE80062FA75 /* App */,
 				85152BDC2B73AFD70062FA75 /* Views */,
 				85152BDB2B73AFC30062FA75 /* ModelData */,
-				852B167F2B6D437800AC4787 /* Assets.xcassets */,
-				852B16812B6D437800AC4787 /* Preview Content */,
+				85152BDE2B73B1800062FA75 /* Assets */,
 			);
 			path = Spar;
 			sourceTree = "<group>";
@@ -322,7 +330,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Spar/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Spar/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 4DHB28A3AA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -352,7 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Spar/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Spar/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 4DHB28A3AA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
