@@ -11,7 +11,6 @@
 		852B167E2B6D437700AC4787 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B167D2B6D437700AC4787 /* ContentView.swift */; };
 		852B16802B6D437800AC4787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852B167F2B6D437800AC4787 /* Assets.xcassets */; };
 		852B16832B6D437800AC4787 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852B16822B6D437800AC4787 /* Preview Assets.xcassets */; };
-		852B168A2B6D532C00AC4787 /* PriceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B16892B6D532C00AC4787 /* PriceCard.swift */; };
 		852B168C2B6D551200AC4787 /* MainImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B168B2B6D551200AC4787 /* MainImage.swift */; };
 		852B168E2B6D56DC00AC4787 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B168D2B6D56DC00AC4787 /* ProductView.swift */; };
 		852B16942B6D6C3A00AC4787 /* AboutProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B16932B6D6C3A00AC4787 /* AboutProduct.swift */; };
@@ -28,7 +27,6 @@
 		852B167D2B6D437700AC4787 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		852B167F2B6D437800AC4787 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		852B16822B6D437800AC4787 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		852B16892B6D532C00AC4787 /* PriceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCard.swift; sourceTree = "<group>"; };
 		852B168B2B6D551200AC4787 /* MainImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainImage.swift; sourceTree = "<group>"; };
 		852B168D2B6D56DC00AC4787 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		852B16932B6D6C3A00AC4787 /* AboutProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProduct.swift; sourceTree = "<group>"; };
@@ -50,6 +48,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85152BDB2B73AFC30062FA75 /* ModelData */ = {
+			isa = PBXGroup;
+			children = (
+				852B169B2B6D7E2B00AC4787 /* Data.swift */,
+			);
+			path = ModelData;
+			sourceTree = "<group>";
+		};
+		85152BDC2B73AFD70062FA75 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				852B167D2B6D437700AC4787 /* ContentView.swift */,
+				852B168B2B6D551200AC4787 /* MainImage.swift */,
+				852B168D2B6D56DC00AC4787 /* ProductView.swift */,
+				852B16932B6D6C3A00AC4787 /* AboutProduct.swift */,
+				852B16992B6D7AAD00AC4787 /* FeedbacksView.swift */,
+				852B169F2B6D9A5400AC4787 /* PickerView.swift */,
+				85946F932B6EB70600112CDF /* PriceCountView.swift */,
+				85946F952B707B9F00112CDF /* PriceLine.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		85152BDD2B73AFE80062FA75 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				852B167B2B6D437700AC4787 /* SparApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		852B166F2B6D437700AC4787 = {
 			isa = PBXGroup;
 			children = (
@@ -69,17 +98,9 @@
 		852B167A2B6D437700AC4787 /* Spar */ = {
 			isa = PBXGroup;
 			children = (
-				852B167B2B6D437700AC4787 /* SparApp.swift */,
-				852B16892B6D532C00AC4787 /* PriceCard.swift */,
-				852B168B2B6D551200AC4787 /* MainImage.swift */,
-				852B168D2B6D56DC00AC4787 /* ProductView.swift */,
-				852B16932B6D6C3A00AC4787 /* AboutProduct.swift */,
-				852B16992B6D7AAD00AC4787 /* FeedbacksView.swift */,
-				852B169F2B6D9A5400AC4787 /* PickerView.swift */,
-				852B167D2B6D437700AC4787 /* ContentView.swift */,
-				85946F932B6EB70600112CDF /* PriceCountView.swift */,
-				852B169B2B6D7E2B00AC4787 /* Data.swift */,
-				85946F952B707B9F00112CDF /* PriceLine.swift */,
+				85152BDD2B73AFE80062FA75 /* App */,
+				85152BDC2B73AFD70062FA75 /* Views */,
+				85152BDB2B73AFC30062FA75 /* ModelData */,
 				852B167F2B6D437800AC4787 /* Assets.xcassets */,
 				852B16812B6D437800AC4787 /* Preview Content */,
 			);
@@ -165,7 +186,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				852B169A2B6D7AAD00AC4787 /* FeedbacksView.swift in Sources */,
-				852B168A2B6D532C00AC4787 /* PriceCard.swift in Sources */,
 				852B167E2B6D437700AC4787 /* ContentView.swift in Sources */,
 				852B16942B6D6C3A00AC4787 /* AboutProduct.swift in Sources */,
 				85946F962B707B9F00112CDF /* PriceLine.swift in Sources */,

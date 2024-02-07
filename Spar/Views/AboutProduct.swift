@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct AboutProduct: View {
     var body: some View {
         VStack {

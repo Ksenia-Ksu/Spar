@@ -13,7 +13,7 @@ struct PriceCountView: View {
         HStack {
             VStack(alignment: .leading) {
                 HStack {
-                    Text(viewModel.isThing ? "55 р/шт" : "55 р/кг")
+                    Text(viewModel.isThing ? "120 р/шт" : "55 р/кг")
                         .bold()
                         .font(.system(size: 36))
                 }
@@ -41,7 +41,7 @@ struct PriceCountView: View {
                         Text(viewModel.isThing == true ? "шт" : "кг")
                     }
                     .font(.system(size: 23).bold())
-                    Text("120,0 р")
+                    Text(String(120.00 * Double(viewModel.amount)))
                 }
                 .foregroundColor(.white)
             
