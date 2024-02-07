@@ -41,7 +41,7 @@ struct PriceCountView: View {
                         Text(viewModel.isThing == true ? "шт" : "кг")
                     }
                     .font(.system(size: 23).bold())
-                    Text(String(120.00 * Double(viewModel.amount)))
+                    Text(viewModel.isThing  ? String(120.00 * Double(viewModel.amount)) : String(55.00 * Double(viewModel.amount)))
                 }
                 .foregroundColor(.white)
             

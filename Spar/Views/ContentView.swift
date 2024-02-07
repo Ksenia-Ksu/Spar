@@ -14,17 +14,15 @@ struct ContentView: View {
             NavigationView {
                 ScrollView {
                     VStack(spacing: 10) {
-                        Group {
-                            MainImage()
-                            ProductView()
-                            AboutProduct()
-                            FeedbacksView()
-                            PickerView(viewModel: viewModel)
-                                .onChange(of: viewModel.selectedItem) { _ in
-                                    viewModel.setIsThing()
-                                }
-                            PriceCountView(viewModel: viewModel)
-                        }
+                        MainImage()
+                        ProductView()
+                        AboutProduct()
+                        FeedbacksView()
+                        PickerView(viewModel: viewModel)
+                            .onChange(of: viewModel.selectedItem) { _ in
+                                viewModel.setIsThing()
+                            }
+                        PriceCountView(viewModel: viewModel)
                     }
                     .toolbar {
                         ToolbarItemGroup(placement: .navigationBarTrailing) {
